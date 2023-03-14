@@ -56,7 +56,6 @@ d = [a.*2 a+5; b]
 %  6   8   8   9  %
 %  1   2   1   2  %
 %  3   4   3   4  %
-clc
 
 % Repmat
 x = [7 8; 9 10]
@@ -69,4 +68,14 @@ o = ones(5);
 x = [z o;o z]
 r = repmat(x, 2, 2) % 4x4 black and white
 %imshow(x) % quite small image as chess table
-imshow(r)
+%imshow(r)
+
+clc
+% Extraction a Sub-Matrix
+X = [1,2,3; 4,5,6; 7,8,9]
+X2 = X(1:2,2:3) % let subX's first column equal to X's second column
+X3 = X(1:2,:)
+X4 = X(3,1:2)
+X5 = X(end,end)
+X6 = X(3:-2:1,1)
+X7 = X(1:3,end:-1:1)
