@@ -125,4 +125,4 @@ end
 func = subof2(10,5) % 10 - 5  = 5
 sc = 4;
 vec = [1:4:44]
-[result] = mult(sc, vec)
+[result] = mult(sc, vec) % same as subof2 just multiply
