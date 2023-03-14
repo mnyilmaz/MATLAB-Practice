@@ -123,3 +123,6 @@ end
 
 % Functions - function file must be in the current directory
 func = subof2(10,5) % 10 - 5  = 5
+sc = 4;
+vec = [1:4:44]
+[result] = mult(sc, vec)
