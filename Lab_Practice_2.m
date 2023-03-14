@@ -70,12 +70,56 @@ r = repmat(x, 2, 2) % 4x4 black and white
 %imshow(x) % quite small image as chess table
 %imshow(r)
 
-clc
 % Extraction a Sub-Matrix
+R = 1:2:10 % start : increment : end
+R_rev = 10:-2:1 % start : increment : end
+
 X = [1,2,3; 4,5,6; 7,8,9]
-X2 = X(1:2,2:3) % let subX's first column equal to X's second column
-X3 = X(1:2,:)
-X4 = X(3,1:2)
-X5 = X(end,end)
-X6 = X(3:-2:1,1)
-X7 = X(1:3,end:-1:1)
+X1 = X(1,1:3) % get X's 1st row and columns 1 to 3
+X2 = X(1:2,2:3) % row 1 to 2; column 2 to 3
+X3 = X(1:2,:) % row 1 to 2; all columns
+X4 = X(3,1:2) % 3rd row; columns 1 to 2
+X5 = X(1:3,2)
+X6 = X(2:3, 1:3)
+X7 = X(end,end) % X(3,3)
+X8 = X(1, 3:-1:1) % get first row reversed
+X9 = X(2:3, 3:-1:1) % get last 2 rows reversed
+X10 = X(3:-2:1,1) % rows reversed
+X11 = X(1:3,end:-1:1)
+
+V = X(:) % [1 x end] vector matrix
+
+% Matrix Division
+A = [1 2; 1 3]
+B = [2 2; 2 2]
+C = A./B
+D = A/B
+E = A.^2
+F = A.^3
+G = A.^(1/2)
+
+S = [9 4; 16 64]
+S = sqrt(S)
+
+clc
+clear all
+% Logical Operators | Boolean Results 1 - 0
+and =  1&1
+or = 1|0
+less = 5 < 10
+less_eq = 5 <= 10
+i = 5 % assignment
+if_eq = i == 6 % is equal
+if_n_eq = i ~= 5 % is not equal to
+
+% Example 2
+j = 4;
+
+if j == 4
+  j = 27
+else
+    j * 11
+end
+
+% Functions - function file must be in the current directory
+func = subof2(10,5) % 10 - 5  = 5
