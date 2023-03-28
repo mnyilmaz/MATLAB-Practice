@@ -1,5 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%                 MATLAB LAB PRACTICE 4                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+
+% Magic Plotting
+mg = magic(4); % sum of rows and columns are equal
+%figure, plot(mg)
+
+clc
+
 % Example: Plot the signal with plot and stem
 % y = x^2 + x^3
 % x = [0,5]
@@ -121,7 +127,57 @@ t2 = x2.+ 2;
 t3 = x3.- 2;
 x = [x1, x2, x3];
 t = [t1, t2, t3];
-plot(x,t, 'b--'), title("Question 2")
-grid on;
+%%plot(x,t, 'b--'), title("Question 2")
+%%grid on;
 
 % Question 3
+t = [0:pi/50:4*pi];
+x = -sin(t) -sin(t/2);
+y = cos(t) - cos(t/2);
+z = -cos(t) -cos(t/2);
+signal2plot(y,z,x);
+
+figure,
+%%subplot(1,3,1),plot(t,x, 'b--');
+title('Graph 1')
+%%subplot(1,3,2),plot(t,y, 'r--');
+title('Graph 2');
+%%subplot(1,3,3),plot(t,z, 'o--');
+title('Graph 3');
+
+% Sine Wave
+fs = 512;      % Sampling frequency
+dt = 1/fs;    % Seconds per sample
+StopTime = 1; %0.25 seconds
+t = (0:dt:StopTime-dt); % seconds
+F = 10; %5,2 Sine wave frequency Nyquist theorem says fs must be at least F*2
+data = sin(2*pi*F*t);
+%%plot(data);
+
+clc
+
+% Summarize and Subtratction
+% Screenshot taken
+
+% Time Shifting
+x = [0,1,2,3,4,5,6,7,8,9]
+y = [3,2,7,1,4,0,6,9,5,8]
+%%plot(-x,y)
+%%plot(x+3,y);
+
+clc
+
+% D. Delta Function
+[x, n] = delta(0,-5,5);
+%%stem(n,x);
+
+% Birim Basamak Fonk.
+[x, n] = unit(0,-5,5);
+%%stem(n,x);
+
+% Example of Signal Addition 2δ[n+2]-δ[n-4]
+d1 = delta(2, -5, 5);
+d2 = delta(-4, -5, 5);
+x = 2.*d1 - d2;
+stem(x); title("2δ[n+2]-δ[n-4]"), xlabel("X"), ylabel("Y")
+grid on;
