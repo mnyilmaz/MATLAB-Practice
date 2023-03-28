@@ -92,3 +92,23 @@ clc
 A = [1 2 3; 4 5 6; 7 8 9]
 tu = triu(A) % upper triangle
 tl = tril(A) % lower triangle
+
+clc
+
+% Plotting
+x = [0 1 2 3 4];
+y =[3 2 4 8 1]; % 3 at 0; 2 at 1; 4 at 2; 8 at 3; 1 at 4
+%plot(x,y) % draws a plot according to data's (continious signal)
+%title('Plotting') % naming
+%xlabel('X-Label'), ylabel('Y-Label')
+%stem(x,y) % discrete time signal
+
+clc
+
+% Magic Plotting
+mg = magic(4); % sum of rows and columns are equal
+%figure, plot(mg)
+
+clc
+
+% Plotting
