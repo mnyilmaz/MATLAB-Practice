@@ -29,4 +29,32 @@ C = [A,B]
 
 x = [1 2; 3 4]
 y = [5 6; 7 8]
-%[add, sub] = addandsub(x, y)
+[add, sub] = addandsub(x, y)
+
+clc
+
+% Matlab Inbuilt Math Functions
+
+k = [12 8 3; 10 5 6; 4 2 9]
+vec = k(:); %convert matrix into vector
+
+% Max
+mx = max(max(k)) % without double max it will display the row with the max number
+mxvec = max(vec)
+[m, i] = max(k) % m = max variable column, i = index values
+col = max(k(:,2)) % get column's max value = 8
+row = max(k(2,:)) % get row's max value
+all = max(k,[],2) % get all the max values of the rows 12, 10, 9
+
+% Min
+mn = min(max(k)) % max = 12, 8, 9 and min of it is 8
+col = min(k(:,1)) % get colum's min value (1st col)
+all = min(k,[],2) % get all the min values of the rows 3, 5, 2
+
+% Sort
+s1 = sort(k) % sort column by column 
+s2 = sort(k(:)) % sort as vector
+
+clc
+
+% Real Img
