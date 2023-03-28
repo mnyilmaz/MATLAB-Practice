@@ -52,9 +52,43 @@ col = min(k(:,1)) % get colum's min value (1st col)
 all = min(k,[],2) % get all the min values of the rows 3, 5, 2
 
 % Sort
-s1 = sort(k) % sort column by column 
+s1 = sort(k) % sort column by column
 s2 = sort(k(:)) % sort as vector
 
 clc
 
 % Real Img
+mat = [1+i, 1+2i, 1+3i]
+rl = real(mat)
+img = imag(mat)
+
+clc
+
+% Abs
+a = abs(-5) % equals 5
+b = abs(3+6i) % equals 6.7082
+
+clc
+
+% Round
+r = round(7.6) % equals 8
+rr = round(4576.168391274) % equals 4576
+
+clc
+
+% Log
+L = log(exp(1)) %ln(e^1)
+L1 = log10(20) % equals 1.3010 (ten based log)
+
+clc
+
+% Length
+A = [1 2 4 5; 45 12 6 5]
+len = length(A) % length of max dimension (row or col which one is greater)
+
+clc
+
+% Triu and Tril
+A = [1 2 3; 4 5 6; 7 8 9]
+tu = triu(A) % upper triangle
+tl = tril(A) % lower triangle
