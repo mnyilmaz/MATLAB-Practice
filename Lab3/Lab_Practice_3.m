@@ -111,4 +111,28 @@ mg = magic(4); % sum of rows and columns are equal
 
 clc
 
-% Plotting
+% Example: Plot the signal with plot and stem
+% y = x^2 + x^3
+% x = [0,5]
+
+x = [0:0.1:5] % between 0 and 5 increase with 0.1
+y = x.^3 + x.^2
+%plot(x,y)
+%title('Plot Example') % naming
+%xlabel('X-Label'), ylabel('Y-Label')
+%stem(x,y)
+
+% Example: 2D plotting, plot sin(x) and cos(x) over [0, 2pi] with different colors
+x = [0:0.01:2*pi]
+%%hold on;
+%%plot(sin(x),'*b')
+%%plot(cos(x),'g:')
+%%title('Sin-Cos'), xlabel('X-Label'), ylabel('Y-Label')
+%%legend('Y data','Zdata');
+%%hold off;
+
+% otherwise
+figure,plot(x,sin(x),x,cos(x));
+title('Sin-Cos'), xlabel('X-Label'), ylabel('Y-Label'),
+legend('Y data','Zdata');
+grid on;
