@@ -32,8 +32,8 @@ subplot(2,1,2), stem(y,id), title('Discrete'); xlabel("id"); ylabel("Y");
 %% Question 2:
 % y = cos(x) + sin(x) + x.^1/2
 % x one by one -100, 100
-x = [-100:0.01:100];
-y = cos(x) + sin(x) + x.^1/2;
+x = [-100:100];
+y = cos(x) + sin(x) + x.^(1/2);
 figure,
 plot(x,y), title('Question 2'); xlabel("X"); ylabel("Y");
 
