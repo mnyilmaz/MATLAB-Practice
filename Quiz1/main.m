@@ -63,7 +63,7 @@ plot(x,t), title('Question 3'), xlabel("X"), ylabel("T");
 % x[n] = 0.9n(u[n] - (1.5)delta[n-11]) between 0 and 50 included
 
 n = [0:50];
-x1 = 0.9.*n.*(unit(0,0,50) - 1.5*delta(-11,0, 50));
+x1 = 0.9.*n.*(unit(0,0,50) - 1.5.*delta(-11,0, 50));
 stem(n, x1), title('Question 4'); xlabel("x[n]"); ylabel("n");
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
