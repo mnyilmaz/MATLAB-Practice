@@ -1,4 +1,4 @@
-%% Biomedical Signal Processing Quiz 1 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                 Biomedical Signal Processing Quiz 1                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Question 1:
 %% A. Sort
