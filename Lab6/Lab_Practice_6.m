@@ -44,7 +44,7 @@ y = prod(x);
 
 
 %% Signal Energy
-% Example: if -4 <= n <= 4 cos(πn) otherwise 0, find the signal of this function
+% Example: if -4 <= n <= 4 cos(πn) otherwise 0, find the energy of this signal
 n = [-4:4];
 x = sqrt(abs(cos(pi*n)));
 result = sum(x(:))
