@@ -69,8 +69,9 @@ stem(n, x1), title('Question 4'); xlabel("x[n]"); ylabel("n");
 %% Question 5:
 % Plot the sine wave
 t = linspace(0,2,0.1)
-f = 3;
-fs = 250;
-
-
-
+fs = 250;                % Sampling frequency
+dt = 1/fs;               % Seconds per sample
+StopTime = 1;            % 0.25 seconds
+t1 = (0:dt:StopTime-dt); % seconds
+F = 3;                   % 5,2 Sine wave frequency Nyquist theorem says fs must be at least F*2
+data = sin(2*pi*F*t);
