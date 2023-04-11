@@ -7,10 +7,12 @@ vec = id(:);
 sorted = sort(id)
 
 %% B. Find Min
-%mnvec = min(vec)
+mn = min(max(id))
+mnvec = min(vec)
 
 %% C. Find Max
-%mxvec = max(vec)
+mx = max(max(id))
+mxvec = max(vec)
 
 %% D. Plot Cont. Signal
 y =[1:10];
