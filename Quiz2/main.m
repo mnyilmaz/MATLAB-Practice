@@ -129,12 +129,3 @@ y = conv(x, h, 'same');
 
 subplot(3, 1, 3); plot(t, y);
 xlabel('t'); ylabel('y(t)'); title('Convolution y(t)');
-
-## Merve Nur YILMAZ
-## 2021231015
-
-
-
-
-
-
