@@ -69,9 +69,6 @@ xlabel('Frequency (w)'); ylabel('|H(e^{jw})|'); title('Magnitude of DTFT');
 subplot(4, 1, 4); plot(w, angle(X_dtft));
 xlabel('Frequency (w)'); ylabel('Phase'); title('Phase of DTFT');
 
-%% c. Compare plots above in one plot (use hold function)
-%% I've drawn plots inside a figure. Also tried to use hold function above.
-
 #############################################################################################################
 
 %% Question 4: x(t) = 2*e^(-0.16*t)*e^j*(t+pi/6) plot its magnitude, phase, the real part and imaginary part
@@ -79,7 +76,6 @@ xlabel('Frequency (w)'); ylabel('Phase'); title('Phase of DTFT');
 t = linspace(0, 10, 1000);
 x = 2 * exp(-0.16 * t) .* exp(1j * (t + pi/6));
 
-# We haven't learned disp() function on previous lectures, also it is not required to use but useful
 magnitude = abs(x);
 disp(magnitude) 
 phase = angle(x);
@@ -106,7 +102,6 @@ xlabel('t'); ylabel('Imaginary Part'); title('Imaginary Part of x(t)');
 
 %% Question 5: While -2 < t < 0 x(t) = t^2 ; while 0 < t < 2 x(t) = sint and h(t) = 0.1*e^t
 %% a. Plot the input x(t)
-# I've tried different linspaces but probably due to GNU Octave it raised an error. So I defined as below.
 t = linspace(-2, 2, 1000);
 x(t >= -2 & t < 0) = t(t >= -2 & t < 0).^2;
 x(t >= 0 & t <= 2) = sin(t(t >= 0 & t <= 2));
@@ -123,8 +118,6 @@ xlabel('t'); ylabel('h(t)'); title('Pulse Response h(t)');
 
 %% c. Perform the convolution y(t) = x(t) * h(t) and plot y(t)
 # On documentation:  -- conv (A, B, SHAPE) (when type conv --help)
-# I also tried this one with 'different' keyword result was the same. 
-# But without 'same' figure did not show up.
 y = conv(x, h, 'same');
 
 subplot(3, 1, 3); plot(t, y);
